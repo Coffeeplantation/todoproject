@@ -1,9 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.urls import reverse_lazy 
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView
-from django.urls import reverse_lazy 
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from .models import Task
 
@@ -20,4 +20,15 @@ class TaskDetail(DetailView):
 class TaskCreate(CreateView):
     model = Task
     fields = "__all__"  # or specify the fields you want to include
-    success_url = reverse_lazy("create-task")
+    success_url = reverse_lazy("tasks")
+
+class TaskUpdate(UpdateView):
+    model = Task
+    fields = "__all__"  # or specify the fields you want to include
+    success_url = reverse_lazy("tasks")
+
+class TaskDelete(DeleteView):
+    model = Task
+    fields = "__all__"  # or specify the fields you want to include
+    success_url = reverse_lazy("tasks")
+    context_object_name = "task"
