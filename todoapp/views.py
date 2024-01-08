@@ -37,5 +37,7 @@ class TaskDelete(DeleteView):
 
 class TaskListLoginView(LoginView):
     field = "__all__"
+    template_name = "todoapp/login.html"
+
     def get_success_url(self):
         return reverse_lazy("tasks")
