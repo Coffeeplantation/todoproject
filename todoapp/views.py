@@ -5,6 +5,8 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
+from django.contrib.auth.views import LoginView
+
 from .models import Task
 
 # Create your views here.
@@ -32,3 +34,8 @@ class TaskDelete(DeleteView):
     fields = "__all__"  # or specify the fields you want to include
     success_url = reverse_lazy("tasks")
     context_object_name = "task"
+
+class TaskListLoginView(LoginView):
+    field = "__all__"
+    def get_success_url(self):
+        return reverse_lazy("tasks")
