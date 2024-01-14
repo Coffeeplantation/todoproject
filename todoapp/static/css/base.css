@@ -1,4 +1,3 @@
-<style>
   body {
     background-color: #daedf9;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -22,4 +21,19 @@ h1 {
   margin: 0;
 }
 
-  </style>
+.header {
+  text-align: center;
+  padding: 20px 0;
+  background: rgb(37,75,168);
+  background: linear-gradient(90deg, rgba(37,75,168,0.94) 32%, rgba(60,97,147,1) 87%);
+  border-radius: 5px 5px 0 0;
+  color: white;
+}
+
+.taskWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid #4646466a;
+}
