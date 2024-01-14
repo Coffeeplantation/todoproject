@@ -23,7 +23,7 @@ class TaskList(LoginRequiredMixin, ListView):
         #context["programming"] = "python"
         #return context
         context["tasks"] = context["tasks"].filter(user=self.request.user)
-        searchInputText =self.request.GET.get("search")
+        searchInputText =self.request.GET.get("search") or ""
         if searchInputText:
             context["tasks"] = context["tasks"].filter(title__icontains=searchInputText)
 
