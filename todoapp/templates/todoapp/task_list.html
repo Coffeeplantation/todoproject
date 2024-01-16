@@ -4,13 +4,13 @@
   <h1>{{request.user}}のタスク</h1>
 </div>
 
-<!-- <h1>Todoリスト</h1>
-<a href="{% url 'create-task' %}">タスクの追加</a>
-
+<div class="serchWrapper">
 <form method="GET">
-  <input type="text" name="search" value="{{search}}"/>
-  <input type="submit" value="検索" />
-</form> -->
+  <input type="text" name="search" value="{{search}}" class="searchInput" />
+  <input type="submit" value="検索" class="searchButton" />
+</form>
+<a href="{% url 'create-task' %}" class="addButton" >➕</a>
+</div>
 
 <!-- <table>
   <tr>
