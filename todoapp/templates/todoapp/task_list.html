@@ -4,27 +4,14 @@
   <h1>{{request.user}}のタスク</h1>
 </div>
 
-<div class="serchWrapper">
+<div class="searchWrapper">
 <form method="GET">
   <input type="text" name="search" value="{{search}}" class="searchInput" />
   <input type="submit" value="検索" class="searchButton" />
 </form>
-<a href="{% url 'create-task' %}" class="addButton" >➕</a>
+<a href="{% url 'create-task' %}" class="addButton" >+</a>
 </div>
 
-<!-- <table>
-  <tr>
-    <th>タスク</th>
-    </tr>
-    {% for task in tasks %}
-  <tr>
-    <td>{{ task.title }}</td>
-    <td><a href="{% url 'task' task.id %}">確認</a></td>
-    <td><a href="{% url 'edit-task' task.id %}">編集</a></td>
-    <td><a href="{% url 'delete-task' task.id %}">削除</a></td>
-  </tr>
-  {% endfor %}
-  </table> -->
 
 <div class="tasksWrapper">
   {% for task in tasks %}

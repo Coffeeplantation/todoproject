@@ -84,6 +84,7 @@ h1 {
   align-items: center;
 }
 
+
 .searchInput {
 height: 24px;
 outline: none;
@@ -131,3 +132,4 @@ textarea {
   margin: 0;
   padding: 0;
 }
+
